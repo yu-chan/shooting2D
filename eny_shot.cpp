@@ -103,7 +103,7 @@ void eny_bullet_calc(int i) {
 				else               dfc.hp-=eny[i].power;
 				if(blc.hp<=0 || atk.hp<=0 || dfc.hp<=0) {
 					over_regist();
-					display_mode++;
+					display_mode = 2;
 				}
 			}
 		}

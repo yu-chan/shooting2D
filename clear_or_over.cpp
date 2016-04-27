@@ -32,10 +32,17 @@ void over_calc() {
 		g_over.brr+=2;
 		if(g_over.brr>=255) g_over.brr=255;
 	}
+	if (checkKey(KEY_INPUT_RETURN) || checkKey(KEY_INPUT_SPACE) > 0) {
+		g_over.flag = 0;
+		delete_bgm();
+		ini();
+		start_mode = 0;
+		display_mode = 0;
+	}
 }
 
 //ƒƒCƒ“ˆ—
 void c_o_main() {
-	if(display_mode==4)      clear_calc();
-	else if(display_mode==5) over_calc();
+	if(display_mode==1)      clear_calc();
+	else if(display_mode==2) over_calc();
 }

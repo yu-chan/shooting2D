@@ -19,24 +19,24 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	//load_story();
 	start_mode=0;
 	display_mode=0;
-	while(ProcessLoop()==0 && start_select_mode!=3) {
+	while(ProcessLoop()==0 && start_select_mode!=2) {
 		sound_ini();
 		graph_start_back();
 		switch(display_mode) {
 			case 0:
 				start_display();
 				break;
+			//case 1:
+			//	graph_select_stage();
+			//	break;
+			//case 2:
+			//	//load_boss();
+			//	rank_display();
+			//	break;
+			//case 3:
+			//	mc_select();
+			//	break;
 			case 1:
-				graph_select_stage();
-				break;
-			case 2:
-				//load_boss();
-				rank_display();
-				break;
-			case 3:
-				mc_select();
-				break;
-			case 4:
 				if(stage_count==0) {
 					load_story();
 					load_boss();
@@ -56,7 +56,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 					mc_bom();
 					mc_laser();
 				}
-				if(mc_num==0) {
+				blc_calc();
+				blc_move();
+				/*if(mc_num==0) {
 					blc_calc();
 					blc_move();
 				} else if(mc_num==1) {
@@ -65,12 +67,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				} else {
 					dfc_calc();
 					dfc_move();
-				}
+				}*/
 				bgm_main();
 				c_o_main();
 				stage_count++;
 				break;
-			case 5:
+			case 2:
 				graph_play();
 				bgm_main();
 				c_o_main();

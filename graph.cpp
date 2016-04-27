@@ -5,7 +5,7 @@ void graph_start_back() {
 	int i,j;
 	int sizeX,sizeY;//画像のサイズ
 	GetGraphSize(start_back, &sizeX, &sizeY);//画像のサイズを取得
-	if(display_mode>=0 && display_mode<=3) {
+	if(display_mode>=0 && display_mode<=1) {
 		for(i=0; i<WND_WID; i+=sizeX) {
 			for(j=0; j<WND_HET; j+=sizeY) {
 				DrawGraph(i, j, start_back, FALSE);
@@ -220,7 +220,7 @@ void graph_over() {
 
 //プレイ中の全ての画像の描画
 void graph_play() {
-	if(display_mode==4) {
+	if(display_mode==1) {
 	graph_play_back();
 	graph_item();
 	graph_mc_shot();
@@ -238,7 +238,7 @@ void graph_play() {
 	graph_beam_charge();
 	graph_boss_beam();
 	graph_clear();
-	} else if(display_mode==5) {
+	} else if(display_mode==2) {
 	graph_over();
 	}
 }

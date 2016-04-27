@@ -16,7 +16,7 @@
 #define PI2 (PI * 2)
 
 //スタート画面のメニュー項目の最大数
-#define SM_MAX 4
+#define SM_MAX 3
 
 //プレイ画面中のメニュー項目の最大数
 #define PM_MAX 3

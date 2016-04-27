@@ -7,8 +7,7 @@ int start() {
 		sMenu sm[SM_MAX]={
 			{80,100,"Play"},
 			{100,150,"操作方法"},
-			{100,200,"自機の種類"},
-			{100,250,"exit"},
+			{100,200,"exit"},
 		};
 		if(checkKey(KEY_INPUT_UP)==1 || checkKey(KEY_INPUT_F)==1) {//upキーまたはfキーが押されていれば
 			num=(num+SM_MAX-1)%SM_MAX;
@@ -24,7 +23,7 @@ int start() {
 		}
 
 		//メニュー描画
-		for(int i=0; i<4; i++) {
+		for(int i=0; i<SM_MAX; i++) {
 			DrawFormatString(sm[i].x, sm[i].y, GetColor(255,255,255), sm[i].name);
 			//Enterまたはスペースキーが押されたら、画面を切り替える
 			if(sm[i].x==80 && (checkKey(KEY_INPUT_RETURN)==1 || 
@@ -92,7 +91,7 @@ void mc_knd() {
 void start_display() {
 	if(start_mode==1) {
 		if(start_select_mode==1) how_play();
-		else if(start_select_mode==2) mc_knd();
+		//else if(start_select_mode==2) mc_knd();
 	} else {
 		start();
 	}
