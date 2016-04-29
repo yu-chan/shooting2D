@@ -61,35 +61,6 @@ void how_play() {
 	}
 }
 
-//自機の種類を説明
-/*
-void mc_knd() {
-	mc_explanation epl[3]={
-		{200, 60, 300, 60, 300, 80, "バランスタイプ", "平均的な戦闘機"},
-		{200, 220, 300, 220, 300, 240, "アタックタイプ", "攻撃が高く、防御が低い"},
-		{200, 380, 300, 380, 300, 400, "ディフェンスタイプ", "防御が高く、攻撃が低い"},
-	};
-	//バランスタイプの説明
-	DrawFormatString(epl[0].nx, epl[0].ny, GetColor(255,255,255), epl[0].name);
-	DrawGraph(epl[0].ix, epl[0].iy, blc.img[0], TRUE);
-	DrawFormatString(epl[0].sx, epl[0].sy, GetColor(255,255,255), epl[0].sentence);
-	//アタックタイプの説明
-	DrawFormatString(epl[1].nx, epl[1].ny, GetColor(255,255,255), epl[1].name);
-	DrawGraph(epl[1].ix, epl[1].iy, atk.img[0], TRUE);
-	DrawFormatString(epl[1].sx, epl[1].sy, GetColor(255,255,255), epl[1].sentence);
-	//ディフェンスタイプの説明
-	DrawFormatString(epl[2].nx, epl[2].ny, GetColor(255,255,255), epl[2].name);
-	DrawGraph(epl[2].ix, epl[2].iy, dfc.img[0], TRUE);
-	DrawFormatString(epl[2].sx, epl[2].sy, GetColor(255,255,255), epl[2].sentence);
-
-	//キャンセルボタンが押されたら、元のスタート画面に戻る
-	if(checkKey(KEY_INPUT_K)==1 || checkKey(KEY_INPUT_B)==1) {
-		se_flag[2]=1;//効果音をオン
-		start_mode=0;
-	}
-}
-*/
-
 void start_display() {
 	if(start_mode==1) {
 		if(start_select_mode==1) how_play();
