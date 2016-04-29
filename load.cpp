@@ -101,7 +101,7 @@ void load() {
 	item_img[6]=LoadGraph("画像/アイテム/item6.png");*/
 
 	//スコア表示用の数字画像を読み込む
-	LoadDivGraph("画像/スコア/num.png", 10, 10, 1, 16, 18, score_img);
+	//LoadDivGraph("画像/スコア/num.png", 10, 10, 1, 16, 18, score_img);
 
 	//ボスの画像を読み込む
 	boss_img[0]=LoadGraph("画像/ボス/boss0.png");

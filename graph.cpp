@@ -231,7 +231,7 @@ void graph_play() {
 	graph_eny_shot();
 	graph_enemy();
 	graph_explosion();
-	graph_score();
+	//graph_score();
 	graph_boss();
 	//graph_boss_name();
 	graph_boss_shot();
