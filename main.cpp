@@ -41,10 +41,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 					load_story();
 					load_boss();
 				}
-				calc_stage_title();
+				//calc_stage_title();
 				graph_play();
 				effect();
-				item_calc();
+				//item_calc();
 				enemy_main();
 				enemy_shot();
 				//if(blc.hp<=0 || atk.hp<=0 || dfc.hp<=0) {

@@ -222,7 +222,7 @@ void graph_over() {
 void graph_play() {
 	if(display_mode==1) {
 	graph_play_back();
-	graph_item();
+	//graph_item();
 	graph_mc_shot();
 	graph_mc_bom();
 	graph_mc_laser();

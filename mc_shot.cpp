@@ -153,16 +153,16 @@ void item_regist_s(int j, int knd) {
 
 //“G‚Ì¶‘¶”»’è
 int eny_death_judge_s(int j) {
-	int knd;
+	//int knd;
 	//“G‚ÌHP‚ª0ˆÈ‰º‚É‚È‚Á‚½‚çA“G‚ğÁ‚·
 	if(eny[j].hp<=0) {
 		eny[j].flag=0;
 		score[rank][stage]+=5;
 		//Á‚¦‚½‚Æ‚«ƒAƒCƒeƒ€‚ğ‚Á‚Ä‚¢‚é‚©’²‚×‚é
 		//‚Á‚Ä‚¢‚ê‚Î“o˜^
-		if((knd=is_item_s(j))!=-1) {
+		/*if((knd=is_item_s(j))!=-1) {
 			item_regist_s(j, knd);
-		}
+		}*/
 		return 1;
 	}
 	return 0;

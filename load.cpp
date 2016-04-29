@@ -77,10 +77,10 @@ void load() {
 	se[12]=LoadSoundMem("音楽/SE/eny_shot_hit.wav");
 
 	//ステージタイトルの画像を読み込む
-	st_ti[0].img=LoadGraph("画像/タイトル/stage_title0.png");
+	/*st_ti[0].img=LoadGraph("画像/タイトル/stage_title0.png");
 	st_ti[1].img=LoadGraph("画像/タイトル/stage_title1.png");
 	st_ti[2].img=LoadGraph("画像/タイトル/stage_title2.png");
-	st_ti[3].img=LoadGraph("画像/タイトル/stage_title3.png");
+	st_ti[3].img=LoadGraph("画像/タイトル/stage_title3.png");*/
 
 	//自機ショットの画像を読み込む
 	LoadDivGraph("画像/弾/mc_shot.png", 3, 3, 1, 5, 7, mS);
@@ -92,13 +92,13 @@ void load() {
 	LoadDivGraph("画像/弾/mc_laser.png", 3, 3, 1, 5, 120, mL);
 
 	//アイテムの画像を読み込む
-	item_img[0]=LoadGraph("画像/アイテム/item0.png");
+	/*item_img[0]=LoadGraph("画像/アイテム/item0.png");
 	item_img[1]=LoadGraph("画像/アイテム/item1.png");
 	item_img[2]=LoadGraph("画像/アイテム/item2.png");
 	item_img[3]=LoadGraph("画像/アイテム/item3.png");
 	item_img[4]=LoadGraph("画像/アイテム/item4.png");
 	item_img[5]=LoadGraph("画像/アイテム/item5.png");
-	item_img[6]=LoadGraph("画像/アイテム/item6.png");
+	item_img[6]=LoadGraph("画像/アイテム/item6.png");*/
 
 	//スコア表示用の数字画像を読み込む
 	LoadDivGraph("画像/スコア/num.png", 10, 10, 1, 16, 18, score_img);

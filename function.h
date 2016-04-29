@@ -75,7 +75,7 @@ GLOBAL void beam_charge_regist(int i);
 GLOBAL int is_charge_end();
 
 //item.cpp
-GLOBAL void item_calc();
+//GLOBAL void item_calc();
 
 //eny_act_pattern.cpp
 GLOBAL double rang(double ang);
