@@ -215,6 +215,8 @@ void graph_over() {
 		SetDrawBlendMode(DX_BLENDMODE_ALPHA, g_over.brr);
 		DrawRotaGraphF(g_over.x, g_over.y, 1.0, 0.0, gameover, TRUE, FALSE);
 		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
+		DrawFormatString(75, 230, GetColor(255, 255, 255), "スペースキーまたはenterキーを押せば、もう一度プレイできます");
+		DrawFormatString(75, 250, GetColor(255, 255, 255), "Escキーを押せば、ゲーム終了です");
 	}
 }
 
