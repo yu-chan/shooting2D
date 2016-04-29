@@ -13,7 +13,14 @@ void clear_calc() {
 	if(g_clear.flag==1) {
 		g_clear.y+=g_clear.vy;
 		if(g_clear.y>=WND_HET/2) {
-			g_clear.y=WND_HET/2;
+			g_clear.y = WND_HET / 2;
+			if (checkKey(KEY_INPUT_RETURN) || checkKey(KEY_INPUT_SPACE) > 0) {
+				g_over.flag = 0;
+				delete_bgm();
+				ini();
+				start_mode = 0;
+				display_mode = 0;
+			}
 		}
 	}
 }

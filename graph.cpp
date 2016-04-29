@@ -129,8 +129,11 @@ void graph_boss_beam() {
 
 //ゲームクリアーの表示
 void graph_clear() {
-	if(g_clear.flag==1)
+	if (g_clear.flag == 1) {
 		DrawRotaGraphF(g_clear.x, g_clear.y, 1.0, 0.0, gameclear, TRUE, FALSE);
+		DrawFormatString(75, 290, GetColor(255, 0, 0), "スペースキーまたはenterキーを押せば、もう一度プレイできます");
+		DrawFormatString(75, 310, GetColor(255, 0, 0), "Escキーを押せば、ゲーム終了です");
+	}
 }
 
 //ゲームオーバーの表示
