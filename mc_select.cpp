@@ -1,6 +1,7 @@
 #include "GV.h"
 
 //自機選択画面
+/*
 void mc_select() {
 	static int num=0;
 	char name[256]="自機の種類を選択";
@@ -48,4 +49,4 @@ void mc_select() {
 		display_mode=2;//前の画面に戻る
 		num=0;//最初の選択肢にする
 	}
-}
+}*/

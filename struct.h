@@ -9,6 +9,7 @@ typedef struct {
 }blc_mc;
 
 //戦闘機アタックタイプ
+/*
 typedef struct {
 	float x, y, ang;//x座標, y座標, 角度
 	int hp, hp_max;//x座標, y座標, 角度, 速度, hp, 最大hp
@@ -26,7 +27,7 @@ typedef struct {
 	int shot_mode, shot_cnt, brake;//ショットモード,ショットカウント,ブレーキ
 	int cnt, index;//画像用のカウント、配列の添え字
 	int img[2];//画像
-}dfc_mc;
+}dfc_mc;   */
 
 //自機ショットの構造体
 typedef struct {
@@ -36,10 +37,10 @@ typedef struct {
 }mc_shot_info;
 
 //自機ボムの構造体
-typedef struct {
+/*typedef struct {
 	int flag,power,cnt,knd;//フラグ、パワー、カウンタ、種類
 	float x,y,angle,spd;//座標、角度、スピード
-}mc_bom_info;
+}mc_bom_info;*/
 
 //自機レーザーの構造体
 typedef struct {
@@ -54,17 +55,17 @@ typedef struct {
 }sMenu;
 
 //プレイ中に中断したときの画面のメニュー
-typedef struct {
+/*typedef struct {
 	float x, y;
 	char name[256];
-}pMenu;
+}pMenu;	*/
 
 //自機説明
-typedef struct {
+/*typedef struct {
 	int ix, iy, nx, ny, sx, sy;//画像・名前・文章の位置
 	char name[128];
 	char sentence[256];
-}mc_explanation;
+}mc_explanation;   */
 
 //操作説明
 typedef struct {
@@ -73,10 +74,10 @@ typedef struct {
 }play_explanation;
 
 //難易度構造体
-typedef struct {
-	int x, y;
-	char name[256];
-}rank_explanation;
+//typedef struct {
+//	int x, y;
+//	char name[256];
+//}rank_explanation;
 
 //敵
 typedef struct {
@@ -162,16 +163,16 @@ typedef struct {
 }explosion;
 
 //ステージタイトルに関する構造体
-typedef struct {
-	//フラグ、画像ハンドル、カウンタ、輝度、出現カウント
-    int flag,img,cnt,brt,appear_cnt;
-}stage_title;
+//typedef struct {
+//	//フラグ、画像ハンドル、カウンタ、輝度、出現カウント
+//    int flag,img,cnt,brt,appear_cnt;
+//}stage_title;
 
 //アイテムに関する構造体
-typedef struct {
-	int flag, cnt, knd, state;
-	float x, y, xSize, ySize, sp;
-}item_info;
+//typedef struct {
+//	int flag, cnt, knd, state;
+//	float x, y, xSize, ySize, sp;
+//}item_info;
 
 //bgmに関する構造体
 typedef struct {

@@ -38,10 +38,10 @@ double shotatan2(int i) {
 
 	if(mc_num==0)
 		ang=atan2(blc.y-eny[n].y, blc.x-eny[n].x);
-	else if(mc_num==1)
+	/*else if(mc_num==1)
 		ang=atan2(atk.y-eny[n].y, atk.x-eny[n].x);
 	else
-		ang=atan2(dfc.y-eny[n].y, dfc.x-eny[n].x);
+		ang=atan2(dfc.y-eny[n].y, dfc.x-eny[n].x);*/
 	return ang;
 	/*
 	ang=atan2f(blc.y-eny[n].y+eny[n].ySize/2*sin((float)eny[n].ang), 
@@ -65,7 +65,7 @@ int is_mc_hit(int i, int j) {
 		y=eny_shot[i].bullet[j].y-blc.y;
 		if(x * x + y * y < r * r)
 			return 1;
-	} else if(mc_num==1) {
+	} /*else if(mc_num==1) {
 		x=eny_shot[i].bullet[j].x-atk.x;
 		y=eny_shot[i].bullet[j].y-atk.y;
 		if(x * x + y * y < r * r)
@@ -75,7 +75,7 @@ int is_mc_hit(int i, int j) {
 		y=eny_shot[i].bullet[j].y-dfc.y;
 		if(x * x + y * y < r * r)
 			return 1;
-	}
+	}*/
 	return 0;
 }
 
@@ -99,9 +99,9 @@ void eny_bullet_calc(int i) {
 				se_flag[12]=1;
 				eny_shot[i].bullet[j].flag=0;
 				if(mc_num==0)      blc.hp-=eny[i].power;
-				else if(mc_num==1) atk.hp-=eny[i].power;
-				else               dfc.hp-=eny[i].power;
-				if(blc.hp<=0 || atk.hp<=0 || dfc.hp<=0) {
+				//else if(mc_num==1) atk.hp-=eny[i].power;
+				//else               dfc.hp-=eny[i].power;
+				if(blc.hp<=0) {
 					over_regist();
 					display_mode = 2;
 				}

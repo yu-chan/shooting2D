@@ -129,27 +129,27 @@ void explosion_regist_s(float x, float y) {
 }
 
 //アイテム確認
-int is_item_s(int j) {
-	for(int i=0; i<ITEM_KND; i++) {
-		if(eny[j].item_knd[i]==1) {
-			eny[j].item_flag[i]=1;
-			return i;
-		}
-	}
-	return -1;
-}
+//int is_item_s(int j) {
+//	for(int i=0; i<ITEM_KND; i++) {
+//		if(eny[j].item_knd[i]==1) {
+//			eny[j].item_flag[i]=1;
+//			return i;
+//		}
+//	}
+//	return -1;
+//}
 
 //アイテムを登録
-void item_regist_s(int j, int knd) {
-	item[item_count].flag=1;
-	item[item_count].knd=knd;
-	item[item_count].x=eny[j].x;
-	item[item_count].y=eny[j].y;
-	item[item_count].xSize=30;
-	item[item_count].ySize=30;
-	item[item_count].sp=2;
-	item_count++;
-}
+//void item_regist_s(int j, int knd) {
+//	item[item_count].flag=1;
+//	item[item_count].knd=knd;
+//	item[item_count].x=eny[j].x;
+//	item[item_count].y=eny[j].y;
+//	item[item_count].xSize=30;
+//	item[item_count].ySize=30;
+//	item[item_count].sp=2;
+//	item_count++;
+//}
 
 //敵の生存判定
 int eny_death_judge_s(int j) {
@@ -157,7 +157,7 @@ int eny_death_judge_s(int j) {
 	//敵のHPが0以下になったら、敵を消す
 	if(eny[j].hp<=0) {
 		eny[j].flag=0;
-		score[rank][stage]+=5;
+		//score[rank][stage]+=5;
 		//消えたときアイテムを持っているか調べる
 		//持っていれば登録
 		/*if((knd=is_item_s(j))!=-1) {

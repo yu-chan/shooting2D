@@ -15,8 +15,8 @@
 
 //自機の構造体宣言
 GLOBAL blc_mc blc;
-GLOBAL atk_mc atk;
-GLOBAL dfc_mc dfc;
+//GLOBAL atk_mc atk;
+//GLOBAL dfc_mc dfc;
 
 //プレイしてないときの背景画像を格納
 GLOBAL int start_back;
@@ -25,8 +25,8 @@ GLOBAL int start_back;
 GLOBAL int img_back[BACK_MAX];
 
 //ステージ選択用の画像
-GLOBAL int s_back_select[BACK_MAX];//小さい画像
-GLOBAL int b_back_select[BACK_MAX];//大きい画像
+//GLOBAL int s_back_select[BACK_MAX];//小さい画像
+//GLOBAL int b_back_select[BACK_MAX];//大きい画像
 
 //効果音を取り込む
 GLOBAL int se[SE_MAX];
@@ -57,13 +57,13 @@ GLOBAL int display_mode;
 GLOBAL int play_mode;//0:プレイ中 1:プレイ中断
 
 //プレイ中断時の画面のモード
-GLOBAL int play_stop;//0:continue 1:操作方法 2:exit
+//GLOBAL int play_stop;//0:continue 1:操作方法 2:exit
 
 //ステージ番号を格納
 GLOBAL int stage;
 
 //難易度番号を格納
-GLOBAL int rank;
+//GLOBAL int rank;
 
 //自機番号を格納
 GLOBAL int mc_num;
@@ -74,8 +74,8 @@ GLOBAL mc_shot_info ms[MC_SHOT_MAX];//ショットの情報
 GLOBAL int shot_mode;//自機のショットモード
 
 //自機ボム
-GLOBAL int mB[MC_BOM_KIND];//画像
-GLOBAL mc_bom_info mb[MC_BOM_MAX];//ボムの情報
+//GLOBAL int mB[MC_BOM_KIND];//画像
+//GLOBAL mc_bom_info mb[MC_BOM_MAX];//ボムの情報
 
 //自機レーザー
 GLOBAL int mL[MC_LASER_KIND];//画像
@@ -98,8 +98,8 @@ GLOBAL int eny_shot_img[ENY_SHOT_KIND];//ショットの画像
 GLOBAL enemy_shot_info eny_shot[ENEMY_MAX];
 
 //ステージタイトル
-GLOBAL stage_title st_ti[BACK_MAX];//タイトルの情報
-GLOBAL int stage_title_count[BACK_MAX];//何カウント目でタイトルを表示させるか
+//GLOBAL stage_title st_ti[BACK_MAX];//タイトルの情報
+//GLOBAL int stage_title_count[BACK_MAX];//何カウント目でタイトルを表示させるか
 GLOBAL int stage_count;
 
 //エフェクト情報
@@ -126,13 +126,13 @@ GLOBAL beam_charge_info charge[CHARGE_MAX];//エフェクト
   5:パワーアップ（レーザー）
   6:パワーアップ（ショット）
 */
-GLOBAL int item_img[ITEM_KND];//画像
-GLOBAL item_info item[ITEM_MAX];//情報
-GLOBAL int item_count;
+//GLOBAL int item_img[ITEM_KND];//画像
+//GLOBAL item_info item[ITEM_MAX];//情報
+//GLOBAL int item_count;
 
 //スコア
-GLOBAL int score_img[10];//画像
-GLOBAL int score[3][4];//各ステージのスコア
+//GLOBAL int score_img[10];//画像
+//GLOBAL int score[3][4];//各ステージのスコア
 
 //ボス
 GLOBAL boss_info boss_load[BACK_MAX];//読み込み専用

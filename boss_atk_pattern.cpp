@@ -100,8 +100,8 @@ void boss_atk3(int i) {
 	int t=boss[stage].mv_cnt2[boss[stage].mv_state];
 	if(t==110) {
 		if(mc_num==0)      regist_phy(blc.x, blc.y, 40);
-		else if(mc_num==1) regist_phy(atk.x, atk.y, 40);
-		else               regist_phy(dfc.x, dfc.y, 40);
+		//else if(mc_num==1) regist_phy(atk.x, atk.y, 40);
+		//else               regist_phy(dfc.x, dfc.y, 40);
 	} else if(t==170) {
 		regist_phy(X_BOSS, Y_BOSS, 100);
 	}

@@ -1,6 +1,7 @@
 #include "GV.h"
 
 //難易度選択画面
+/*
 void rank_display() {
 	static int num=0;
 	rank_explanation exp[3]={
@@ -44,4 +45,4 @@ void rank_display() {
 		display_mode=1;//前の画面に戻る
 		num=0;//最初の選択肢にする
 	}
-}
+}*/

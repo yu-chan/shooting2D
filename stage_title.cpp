@@ -1,6 +1,7 @@
 #include "GV.h"
 
 //ステージタイトルの表示時間を計算する
+/*
 void calc_stage_title() {
 	if(st_ti[stage].appear_cnt==stage_count) {
 		st_ti[stage].flag=1;
@@ -16,4 +17,4 @@ void calc_stage_title() {
 		return;
 	}
 	st_ti[stage].cnt++;
-}
+}*/

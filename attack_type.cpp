@@ -1,12 +1,13 @@
 #include "GV.h"
 
 //アタックタイプの計算
-void atk_calc() {
-	atk.cnt++;
-	if(atk.cnt%5==0) atk.index=atk.cnt%2;
-}
+//void atk_calc() {
+//	atk.cnt++;
+//	if(atk.cnt%5==0) atk.index=atk.cnt%2;
+//}
 
 //移動制御
+	/*
 void atk_move() {
 	float naname=1;
 	int ud_flag=0, rl_flag=0;
@@ -42,4 +43,4 @@ void atk_move() {
 			if(atk.x>WID_MAX) atk.x=WID_MAX;
 		}
 	}
-}
+}*/

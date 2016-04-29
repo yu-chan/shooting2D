@@ -17,8 +17,8 @@ void mc_laser_regist() {
 			   ml[f].spd=15;
 			   ml[f].power=10;
 			   if(mc_num==0)      { ml[f].x=blc.x; ml[f].y=blc.y-20; }
-			   else if(mc_num==1) { ml[f].x=atk.x; ml[f].y=atk.y-20; }
-			   else               { ml[f].x=dfc.x; ml[f].y=dfc.y-20; }
+			   //else if(mc_num==1) { ml[f].x=atk.x; ml[f].y=atk.y-20; }
+			   //else               { ml[f].x=dfc.x; ml[f].y=dfc.y-20; }
 			   se_flag[5]=1;
 		   }
 	}
@@ -109,17 +109,18 @@ void explosion_regist_l(float x, float y) {
 }
 
 //ƒAƒCƒeƒ€Šm”F
-int is_item_l(int j) {
-	for(int i=0; i<ITEM_KND; i++) {
-		if(eny[j].item_knd[i]==1) {
-			eny[j].item_flag[i]=1;
-			return i;
-		}
-	}
-	return 0;
-}
+//int is_item_l(int j) {
+//	for(int i=0; i<ITEM_KND; i++) {
+//		if(eny[j].item_knd[i]==1) {
+//			eny[j].item_flag[i]=1;
+//			return i;
+//		}
+//	}
+//	return 0;
+//}
 
 //ƒAƒCƒeƒ€‚ð“o˜^
+/*
 void item_regist_l(int j, int knd) {
 	item[item_count].flag=1;
 	item[item_count].knd=knd;
@@ -129,20 +130,20 @@ void item_regist_l(int j, int knd) {
 	item[item_count].ySize=30;
 	item[item_count].sp=2;
 	item_count++;
-}
+}*/
 
 //“G‚Ì¶‘¶”»’è
 int eny_death_judge_l(int j) {
-	int knd;
+	//int knd;
 	//“G‚ÌHP‚ª0ˆÈ‰º‚É‚È‚Á‚½‚çA“G‚ðÁ‚·
 	if(eny[j].hp<=0) {
 		eny[j].flag=0;
-		score[rank][stage]+=5;
+		//score[rank][stage]+=5;
 		//Á‚¦‚½‚Æ‚«ƒAƒCƒeƒ€‚ðŽ‚Á‚Ä‚¢‚é‚©’²‚×‚é
 		//Ž‚Á‚Ä‚¢‚ê‚Î“o˜^
-		if((knd=is_item_l(j))!=-1) {
+		/*if((knd=is_item_l(j))!=-1) {
 			item_regist_l(j, knd);
-		}
+		}*/
 		return 1;
 	}
 	return 0;

@@ -58,7 +58,7 @@ GLOBAL void mc_shot();
 GLOBAL void mc_laser();
 
 //stage_title.cpp
-GLOBAL void calc_stage_title();
+//GLOBAL void calc_stage_title();
 
 //enemy.cpp
 GLOBAL void enemy_main();

@@ -15,6 +15,7 @@ void graph_start_back() {
 }
 
 //ステージ選択用画像を描画
+/*
 void graph_select_stage() {
 	static int num=0;
 	int sx[BACK_MAX]={32, 192, 352, 512};
@@ -57,12 +58,13 @@ void graph_select_stage() {
 		num=0;//最初の選択肢にする
 	}
 }
+*/
 
 //自機の描画
 void graph_mc() {
 	if(mc_num==0)      DrawRotaGraphF(blc.x, blc.y, 1.0, 0.0, blc.img[blc.index], TRUE, FALSE);
-	else if(mc_num==1) DrawRotaGraphF(atk.x, atk.y, 1.0, 0.0, atk.img[atk.index], TRUE, FALSE);
-	else               DrawRotaGraphF(dfc.x, dfc.y, 1.0, 0.0, dfc.img[dfc.index], TRUE, FALSE);
+	//else if(mc_num==1) DrawRotaGraphF(atk.x, atk.y, 1.0, 0.0, atk.img[atk.index], TRUE, FALSE);
+	//else               DrawRotaGraphF(dfc.x, dfc.y, 1.0, 0.0, dfc.img[dfc.index], TRUE, FALSE);
 }
 
 //プレイ中の背景描画
@@ -77,10 +79,10 @@ void graph_mc_shot() {
 }
 
 //自機ボムの描画
-void graph_mc_bom() {
-	for(int i=0; i<MC_BOM_MAX; i++)
-		if(mb[i].flag>0) DrawRotaGraphF(mb[i].x, mb[i].y, 1.0, 0.0, mB[0], TRUE, FALSE);
-}
+//void graph_mc_bom() {
+//	for(int i=0; i<MC_BOM_MAX; i++)
+//		if(mb[i].flag>0) DrawRotaGraphF(mb[i].x, mb[i].y, 1.0, 0.0, mB[0], TRUE, FALSE);
+//}
 
 //自機レーザーの描画
 void graph_mc_laser() {
@@ -89,13 +91,13 @@ void graph_mc_laser() {
 }
 
 //ステージタイトルの描画
-void graph_stage_title() {
-	if(st_ti[stage].flag>0) {
-		SetDrawBlendMode(DX_BLENDMODE_ALPHA, st_ti[stage].brt);
-		DrawGraph(30, 50, st_ti[stage].img, TRUE);
-		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
-	}
-}
+//void graph_stage_title() {
+//	if(st_ti[stage].flag>0) {
+//		SetDrawBlendMode(DX_BLENDMODE_ALPHA, st_ti[stage].brt);
+//		DrawGraph(30, 50, st_ti[stage].img, TRUE);
+//		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
+//	}
+//}
 
 //敵の描画
 void graph_enemy() {
@@ -144,18 +146,18 @@ void graph_explosion() {
 }
 
 //アイテムの描画
-void graph_item() {
-	for(int i=0; i<ITEM_MAX; i++)
-		if(item[i].flag==1)
-			DrawRotaGraphF(item[i].x, item[i].y, 1.0, 0.0, item_img[item[i].knd], TRUE, FALSE);
-}
+//void graph_item() {
+//	for(int i=0; i<ITEM_MAX; i++)
+//		if(item[i].flag==1)
+//			DrawRotaGraphF(item[i].x, item[i].y, 1.0, 0.0, item_img[item[i].knd], TRUE, FALSE);
+//}
 
 //スコアの表示
-void graph_score() {
-	DrawGraph(0, 461, score_img[score[rank][stage]/100], TRUE);
-	DrawGraph(20, 461, score_img[(score[rank][stage]%100)/10],TRUE);
-	DrawGraph(40, 461, score_img[score[rank][stage]%10], TRUE);
-}
+//void graph_score() {
+//	DrawGraph(0, 461, score_img[score[rank][stage]/100], TRUE);
+//	DrawGraph(20, 461, score_img[(score[rank][stage]%100)/10],TRUE);
+//	DrawGraph(40, 461, score_img[score[rank][stage]%10], TRUE);
+//}
 
 //ボスの描画
 void graph_boss() {
@@ -226,10 +228,10 @@ void graph_play() {
 	graph_play_back();
 	//graph_item();
 	graph_mc_shot();
-	graph_mc_bom();
+	//graph_mc_bom();
 	graph_mc_laser();
 	graph_mc();
-	graph_stage_title();
+	//graph_stage_title();
 	graph_eny_shot();
 	graph_enemy();
 	graph_explosion();

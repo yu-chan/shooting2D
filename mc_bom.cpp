@@ -1,6 +1,7 @@
 #include "GV.h"
 
 //ボムのフラグを確認する
+/*
 int is_bom_flag() {
 	for(int i=0; i<MC_BOM_MAX; i++)
 		if(mb[i].flag==0) return i;
@@ -185,4 +186,4 @@ void mc_bom_calc() {
 void mc_bom() {
 	mc_bom_regist();
 	mc_bom_calc();
-}
+}*/

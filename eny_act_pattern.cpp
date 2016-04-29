@@ -99,8 +99,8 @@ void enemy_pattern7(int i) {
 	eny[i].vy=-eny[i].sp;
 	if(eny[i].cnt==0) {
 		if(mc_num==0)      eny[i].x=blc.x+x;
-		else if(mc_num==1) eny[i].x=atk.x+x;
-		else               eny[i].x=dfc.x+x;
+		//else if(mc_num==1) eny[i].x=atk.x+x;
+		//else               eny[i].x=dfc.x+x;
 	}
 }
 
@@ -113,8 +113,8 @@ void enemy_pattern8(int i) {
 	eny[i].vy=eny[i].sp;
 	if(eny[i].cnt==0) {
 		if(mc_num==0)      eny[i].x=blc.x+x;
-		else if(mc_num==1) eny[i].x=atk.x+x;
-		else               eny[i].x=dfc.x+x;
+		//else if(mc_num==1) eny[i].x=atk.x+x;
+		//else               eny[i].x=dfc.x+x;
 	}
 }
 
@@ -127,8 +127,8 @@ void enemy_pattern9(int i) {
 	eny[i].vx=-eny[i].sp;
 	if(eny[i].cnt==0) {
 		if(mc_num==0)      eny[i].y=blc.y+y;
-		else if(mc_num==1) eny[i].y=atk.y+y;
-		else               eny[i].y=dfc.y+y;
+		//else if(mc_num==1) eny[i].y=atk.y+y;
+		//else               eny[i].y=dfc.y+y;
 	}
 }
 
@@ -141,8 +141,8 @@ void enemy_pattern10(int i) {
 	eny[i].vx=eny[i].sp;
 	if(eny[i].cnt==0) {
 		if(mc_num==0)      eny[i].y=blc.y+y;
-		else if(mc_num==1) eny[i].y=atk.y+y;
-		else               eny[i].y=dfc.y+y;
+		//else if(mc_num==1) eny[i].y=atk.y+y;
+		//else               eny[i].y=dfc.y+y;
 	}
 }
 
@@ -234,8 +234,8 @@ void enemy_pattern17(int i) {
 		eny[i].naname=0;
 		eny[i].vy=eny[i].sp;
 		if(mc_num==0)      eny[i].x=blc.x;
-		else if(mc_num==1) eny[i].x=atk.x;
-		else               eny[i].x=dfc.x;
+		//else if(mc_num==1) eny[i].x=atk.x;
+		//else               eny[i].x=dfc.x;
 	}
 	if(t==30) {
 		eny[i].vx=eny[i].sp;
@@ -252,8 +252,8 @@ void enemy_pattern18(int i) {
 		eny[i].naname=0;
 		eny[i].vy=eny[i].sp;
 		if(mc_num==0)      eny[i].x=blc.x;
-		else if(mc_num==1) eny[i].x=atk.x;
-		else               eny[i].x=dfc.x;
+		//else if(mc_num==1) eny[i].x=atk.x;
+		//else               eny[i].x=dfc.x;
 	}
 	if(t==30) {
 		eny[i].vx=-eny[i].sp;
@@ -270,8 +270,8 @@ void enemy_pattern19(int i) {
 		eny[i].naname=-PI;
 		eny[i].vy=-eny[i].sp;
 		if(mc_num==0)      eny[i].x=blc.x;
-		else if(mc_num==1) eny[i].x=atk.x;
-		else               eny[i].x=dfc.x;
+		//else if(mc_num==1) eny[i].x=atk.x;
+		//else               eny[i].x=dfc.x;
 	}
 	if(t==30) {
 		eny[i].vx=eny[i].sp;
@@ -288,8 +288,8 @@ void enemy_pattern20(int i) {
 		eny[i].naname=-PI;
 		eny[i].vy=-eny[i].sp;
 		if(mc_num==0)      eny[i].x=blc.x;
-		else if(mc_num==1) eny[i].x=atk.x;
-		else               eny[i].x=dfc.x;
+		//else if(mc_num==1) eny[i].x=atk.x;
+		//else               eny[i].x=dfc.x;
 	}
 	if(t==30) {
 		eny[i].vx=-eny[i].sp;
@@ -306,8 +306,8 @@ void enemy_pattern21(int i) {
 		eny[i].naname=PI/2;
 		eny[i].vx=-eny[i].sp;
 		if(mc_num==0)      eny[i].y=blc.y;
-		else if(mc_num==1) eny[i].y=atk.y;
-		else               eny[i].y=dfc.y;
+		//else if(mc_num==1) eny[i].y=atk.y;
+		//else               eny[i].y=dfc.y;
 	}
 	if(t==30) {
 		eny[i].vx=0;
@@ -324,8 +324,8 @@ void enemy_pattern22(int i) {
 		eny[i].naname=-PI/2;
 		eny[i].vx=eny[i].sp;
 		if(mc_num==0)      eny[i].y=blc.y;
-		else if(mc_num==1) eny[i].y=atk.y;
-		else               eny[i].y=dfc.y;
+		//else if(mc_num==1) eny[i].y=atk.y;
+		//else               eny[i].y=dfc.y;
 	}
 	if(t==30) {
 		eny[i].vx=0;
@@ -342,8 +342,8 @@ void enemy_pattern23(int i) {
 		eny[i].naname=PI/2;
 		eny[i].vx=-eny[i].sp;
 		if(mc_num==0)      eny[i].y=blc.y;
-		else if(mc_num==1) eny[i].y=atk.y;
-		else               eny[i].y=dfc.y;
+		//else if(mc_num==1) eny[i].y=atk.y;
+		//else               eny[i].y=dfc.y;
 	}
 	if(t==30) {
 		eny[i].vx=0;
@@ -360,8 +360,8 @@ void enemy_pattern24(int i) {
 		eny[i].naname=-PI/2;
 		eny[i].vx=eny[i].sp;
 		if(mc_num==0)      eny[i].y=blc.y;
-		else if(mc_num==1) eny[i].y=atk.y;
-		else               eny[i].y=dfc.y;
+		//else if(mc_num==1) eny[i].y=atk.y;
+		//else               eny[i].y=dfc.y;
 	}
 	if(t==30) {
 		eny[i].vx=0;

@@ -62,6 +62,7 @@ void how_play() {
 }
 
 //自機の種類を説明
+/*
 void mc_knd() {
 	mc_explanation epl[3]={
 		{200, 60, 300, 60, 300, 80, "バランスタイプ", "平均的な戦闘機"},
@@ -87,6 +88,7 @@ void mc_knd() {
 		start_mode=0;
 	}
 }
+*/
 
 void start_display() {
 	if(start_mode==1) {

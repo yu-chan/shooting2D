@@ -1,12 +1,13 @@
 #include "GV.h"
 
 //ディフェンスタイプの計算
-void dfc_calc() {
-	dfc.cnt++;
-	if(dfc.cnt%5==0) dfc.index=dfc.cnt%2;
-}
+//void dfc_calc() {
+//	dfc.cnt++;
+//	if(dfc.cnt%5==0) dfc.index=dfc.cnt%2;
+//}
 
 //移動制御
+/*
 void dfc_move() {
 	float naname=1;
 	int ud_flag=0, rl_flag=0;
@@ -42,4 +43,4 @@ void dfc_move() {
 			if(dfc.x>WID_MAX) dfc.x=WID_MAX;
 		}
 	}
-}
+}*/

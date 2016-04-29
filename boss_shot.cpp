@@ -18,10 +18,10 @@ double bossatan2(float x, float y) {
 
 	if(mc_num==0)
 		ang=atan2(blc.y-y, blc.x-x);
-	else if(mc_num==1)
+	/*else if(mc_num==1)
 		ang=atan2(atk.y-y, atk.x-x);
 	else
-		ang=atan2(dfc.y-y, dfc.x-x);
+		ang=atan2(dfc.y-y, dfc.x-x);*/
 
 	return ang;
 }
@@ -49,7 +49,7 @@ int is_mc_hit2(int j) {
 		y=boss_shot[stage].bullet[j].y-blc.y;
 		if(x * x + y * y < r * r)
 			return 1;
-	} else if(mc_num==1) {
+	} /*else if(mc_num==1) {
 		x=boss_shot[stage].bullet[j].x-atk.x;
 		y=boss_shot[stage].bullet[j].y-atk.y;
 		if(x * x + y * y < r * r)
@@ -59,7 +59,7 @@ int is_mc_hit2(int j) {
 		y=boss_shot[stage].bullet[j].y-dfc.y;
 		if(x * x + y * y < r * r)
 			return 1;
-	}
+	}*/
 	return 0;
 }
 
@@ -72,7 +72,7 @@ int is_mc_hit3(int j) {
 		y=boss_beam[stage].bullet[j].y-blc.y;
 		if(x * x + y * y < r * r)
 			return 1;
-	} else if(mc_num==1) {
+	} /*else if(mc_num==1) {
 		x=boss_beam[stage].bullet[j].x-atk.x;
 		y=boss_beam[stage].bullet[j].y-atk.y;
 		if(x * x + y * y < r * r)
@@ -82,7 +82,7 @@ int is_mc_hit3(int j) {
 		y=boss_beam[stage].bullet[j].y-dfc.y;
 		if(x * x + y * y < r * r)
 			return 1;
-	}
+	}*/
 	return 0;
 }
 
@@ -106,9 +106,9 @@ void boss_shot_calc(int i) {
 				se_flag[12]=1;
 				boss_shot[i].bullet[j].flag=0;
 				if(mc_num==0)      blc.hp-=boss[i].power;
-				else if(mc_num==1) atk.hp-=boss[i].power;
-				else               dfc.hp-=boss[i].power;
-				if(blc.hp<=0 || atk.hp<=0 || dfc.hp<=0) {
+				//else if(mc_num==1) atk.hp-=boss[i].power;
+				//else               dfc.hp-=boss[i].power;
+				if(blc.hp<=0) {
 					over_regist();
 					display_mode++;
 				}
@@ -139,8 +139,8 @@ void boss_beam_calc(int i) {
 				se_flag[12]=1;
 				//boss_beam[i].bullet[j].flag=0;
 				if(mc_num==0)      blc.hp-=boss[i].power;
-				else if(mc_num==1) atk.hp-=boss[i].power;
-				else               dfc.hp-=boss[i].power;
+				//else if(mc_num==1) atk.hp-=boss[i].power;
+				//else               dfc.hp-=boss[i].power;
 			}
 		}
 	}

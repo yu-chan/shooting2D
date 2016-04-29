@@ -13,8 +13,8 @@ void mc_atk0() {
 		ms[s].vx=0;
 		ms[s].vy=ms[s].spd;
 		if(mc_num==0)      { ms[s].x=blc.x; ms[s].y=blc.y-20; ms[s].power=blc.power; }
-		else if(mc_num==1) { ms[s].x=atk.x; ms[s].y=atk.y-20; ms[s].power=atk.power; }
-		else               { ms[s].x=dfc.x; ms[s].y=dfc.y-20; ms[s].power=dfc.power; }
+		//else if(mc_num==1) { ms[s].x=atk.x; ms[s].y=atk.y-20; ms[s].power=atk.power; }
+		//else               { ms[s].x=dfc.x; ms[s].y=dfc.y-20; ms[s].power=dfc.power; }
 		se_flag[3]=1;
 	}
 }
@@ -31,11 +31,11 @@ void mc_atk1() {
 			ms[s].spd=10;
 			if(mc_num==0) { 
 				ms[s].x=blc.x; ms[s].y=blc.y; ms[s].power=blc.power/2; 
-			} else if(mc_num==1) { 
+			} /*else if(mc_num==1) { 
 				ms[s].x=atk.x; ms[s].y=atk.y; ms[s].power=atk.power/2; 
 			} else { 
 				ms[s].x=dfc.x; ms[s].y=dfc.y; ms[s].power=dfc.power/2; 
-			}
+			}*/
 			if(j%2==0) {
 				ms[s].naname=-PI/2;
 				ms[s].vx=ms[s].spd;
@@ -69,11 +69,11 @@ void mc_atk2() {
 				ms[s].vy=ms[s].spd*sin((float)ms[s].ang);
 				if(mc_num==0) { 
 					ms[s].x=blc.x; ms[s].y=blc.y; ms[s].power=5; 
-				} else if(mc_num==1) { 
+				} /*else if(mc_num==1) { 
 					ms[s].x=atk.x; ms[s].y=atk.y; ms[s].power=5; 
 				} else { 
 					ms[s].x=dfc.x; ms[s].y=dfc.y; ms[s].power=5; 
-				}
+				}*/
 				se_flag[3]=1;
 			}
 		}
