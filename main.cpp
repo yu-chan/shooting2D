@@ -53,7 +53,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				//}
 				if(stage_count>10) {
 					mc_shot();
-					mc_bom();
+					//mc_bom();
 					mc_laser();
 				}
 				blc_calc();

@@ -30,29 +30,29 @@ GLOBAL void graph_select_stage();
 GLOBAL void graph_play();
 
 //rank.cpp
-GLOBAL void rank_display();
+//GLOBAL void rank_display();
 
 //mc_select.cpp
-GLOBAL void mc_select();
+//GLOBAL void mc_select();
 
 //blance_type.cpp
 GLOBAL void blc_calc();
 GLOBAL void blc_move();
 
 //attack_type.cpp
-GLOBAL void atk_calc();
-GLOBAL void atk_move();
+//GLOBAL void atk_calc();
+//GLOBAL void atk_move();
 
 //defence_type.cpp
-GLOBAL void dfc_calc();
-GLOBAL void dfc_move();
+//GLOBAL void dfc_calc();
+//GLOBAL void dfc_move();
 
 //mc_shot.cpp
 GLOBAL int is_shot_flag();
 GLOBAL void mc_shot();
 
 //mc_bom.cpp
-GLOBAL void mc_bom();
+//GLOBAL void mc_bom();
 
 //mc_laser.cpp
 GLOBAL void mc_laser();
