@@ -11,9 +11,6 @@ void load() {
 
 	//背景画像を読み込む
 	img_back[0]=LoadGraph("画像/背景/stage0.png");
-	img_back[1]=LoadGraph("画像/背景/stage1.png");
-	img_back[2]=LoadGraph("画像/背景/stage2.png");
-	img_back[3]=LoadGraph("画像/背景/stage3.png");
 
 	//敵画像を読み込む
 	es0_img[0]=LoadGraph("画像/敵/senkan00.png");
@@ -28,16 +25,12 @@ void load() {
 	es3_img[0]=LoadGraph("画像/敵/senkan30.png");
 	es3_img[1]=LoadGraph("画像/敵/senkan31.png");
 	GetGraphSize(es3_img[0], &eny_xs[3], &eny_ys[3]);
-	LoadDivGraph("画像/敵/dim_enemy0.png", 4, 1, 4, 64, 64, ed0_img);
-	LoadDivGraph("画像/敵/dim_enemy1.png", 4, 1, 4, 64, 64, ed1_img);
-	LoadDivGraph("画像/敵/dim_enemy2.png", 4, 1, 4, 64, 64, ed2_img);
 
 	//敵のショットを読み込む
 	LoadDivGraph("画像/弾/enemy_shot.png", 4, 4, 1, 5, 7, eny_shot_img);
 
 	//爆発画像を読み込む
 	LoadDivGraph("画像/エフェクト/explosion.png", 16, 4, 4, 56, 56, eps_img);
-	LoadDivGraph("画像/エフェクト/bom_explosion.png", 16, 4, 4, 225, 225, b_eps_img);
 
 	//ビームのチャージエフェクト画像を読み込む
 	img_charge=LoadGraph("画像/エフェクト/charge.png");
