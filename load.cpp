@@ -5,12 +5,6 @@ void load() {
 	//戦闘機バランスタイプ
 	blc.img[0]=LoadGraph("画像/自機/normal1.png");
 	blc.img[1]=LoadGraph("画像/自機/normal2.png");
-	//戦闘機アタックタイプ
-	//atk.img[0]=LoadGraph("画像/自機/attack1.png");
-	//atk.img[1]=LoadGraph("画像/自機/attack2.png");
-	//戦闘機ディフェンスタイプ
-	//dfc.img[0]=LoadGraph("画像/自機/defense1.png");
-	//dfc.img[1]=LoadGraph("画像/自機/defense2.png");
 
 	//スタート画面の背景画像を読み込む
 	start_back=LoadGraph("画像/背景/start_back.png");
@@ -20,16 +14,6 @@ void load() {
 	img_back[1]=LoadGraph("画像/背景/stage1.png");
 	img_back[2]=LoadGraph("画像/背景/stage2.png");
 	img_back[3]=LoadGraph("画像/背景/stage3.png");
-
-	//ステージ選択時用の画像を読み込む
-	/*s_back_select[0]=LoadGraph("画像/背景/select_back0.png");
-	s_back_select[1]=LoadGraph("画像/背景/select_back1.png");
-	s_back_select[2]=LoadGraph("画像/背景/select_back2.png");
-	s_back_select[3]=LoadGraph("画像/背景/select_back3.png");
-	b_back_select[0]=LoadGraph("画像/背景/select_con_back0.png");
-	b_back_select[1]=LoadGraph("画像/背景/select_con_back1.png");
-	b_back_select[2]=LoadGraph("画像/背景/select_con_back2.png");
-	b_back_select[3]=LoadGraph("画像/背景/select_con_back3.png");*/
 
 	//敵画像を読み込む
 	es0_img[0]=LoadGraph("画像/敵/senkan00.png");
@@ -76,12 +60,6 @@ void load() {
 	se[11]=LoadSoundMem("音楽/SE/enemy_shot.wav");
 	se[12]=LoadSoundMem("音楽/SE/eny_shot_hit.wav");
 
-	//ステージタイトルの画像を読み込む
-	/*st_ti[0].img=LoadGraph("画像/タイトル/stage_title0.png");
-	st_ti[1].img=LoadGraph("画像/タイトル/stage_title1.png");
-	st_ti[2].img=LoadGraph("画像/タイトル/stage_title2.png");
-	st_ti[3].img=LoadGraph("画像/タイトル/stage_title3.png");*/
-
 	//自機ショットの画像を読み込む
 	LoadDivGraph("画像/弾/mc_shot.png", 3, 3, 1, 5, 7, mS);
 
@@ -91,23 +69,8 @@ void load() {
 	//自機レーザーの画像を読み込む
 	LoadDivGraph("画像/弾/mc_laser.png", 3, 3, 1, 5, 120, mL);
 
-	//アイテムの画像を読み込む
-	/*item_img[0]=LoadGraph("画像/アイテム/item0.png");
-	item_img[1]=LoadGraph("画像/アイテム/item1.png");
-	item_img[2]=LoadGraph("画像/アイテム/item2.png");
-	item_img[3]=LoadGraph("画像/アイテム/item3.png");
-	item_img[4]=LoadGraph("画像/アイテム/item4.png");
-	item_img[5]=LoadGraph("画像/アイテム/item5.png");
-	item_img[6]=LoadGraph("画像/アイテム/item6.png");*/
-
-	//スコア表示用の数字画像を読み込む
-	//LoadDivGraph("画像/スコア/num.png", 10, 10, 1, 16, 18, score_img);
-
 	//ボスの画像を読み込む
 	boss_img[0]=LoadGraph("画像/ボス/boss0.png");
-	//boss_img[1]=LoadGraph("画像/ボス/boss1.png");
-	//boss_img[2]=LoadGraph("画像/ボス/boss2.png");
-	//boss_img[3]=LoadGraph("画像/ボス/boss3.png");
 
 	//ゲームオーバーの画像を読み込む
 	game_over_back=LoadGraph("画像/ゲームオーバー/GameOver_back.png");
@@ -120,29 +83,12 @@ void load() {
 void load_story_e0() {
 	int n=0, num=0, fp;
 	char fn_e0[32]={"敵情報/ステージ0/story_e0.csv"};
-	/*char fn_m0[32]={"敵情報/ステージ0/story_m0.csv"};
-	char fn_d0[32]={"敵情報/ステージ0/story_d0.csv"};
-	char fn_e1[32]={"敵情報/ステージ1/story_e1.csv"};
-	char fn_m1[32]={"敵情報/ステージ1/story_m1.csv"};
-	char fn_d1[32]={"敵情報/ステージ1/story_d1.csv"};
-	char fn_e2[32]={"敵情報/ステージ2/story_e2.csv"};
-	char fn_m2[32]={"敵情報/ステージ2/story_m2.csv"};
-	char fn_d2[32]={"敵情報/ステージ2/story_d2.csv"};
-	char fn_e3[32]={"敵情報/ステージ3/story_e3.csv"};
-	char fn_m3[32]={"敵情報/ステージ3/story_m3.csv"};
-	char fn_d3[32]={"敵情報/ステージ3/story_d3.csv"};*/
 	int input[64];
 	char inputc[64];
 
 	//ファイル読み込み
 	if(stage==0)
 		fp=FileRead_open(fn_e0);
-	/*else if(stage==1)
-		fp=FileRead_open(fn_e1);
-	else if(stage==2)
-		fp=FileRead_open(fn_e2);
-	else if(stage==3)
-		fp=FileRead_open(fn_e3);*/
 	if(fp==NULL) return;
 
 	//ファイルの最初の２行を読み飛ばす
@@ -200,21 +146,12 @@ void load_story() {
 void load_boss() {
 	int n=stage, num=0, fp;
 	char fn_boss0[32]={"ボス情報/ステージ0/boss0.csv"};
-	/*char fn_boss1[32]={"ボス情報/ステージ1/boss1.csv"};
-	char fn_boss2[32]={"ボス情報/ステージ2/boss2.csv"};
-	char fn_boss3[32]={"ボス情報/ステージ3/boss3.csv"};*/
 	int input[64];
 	char inputc[64];
 
 	//ファイル読み込み
 	if(stage==0)
 		fp=FileRead_open(fn_boss0);
-	/*else if(stage==1)
-		fp=FileRead_open(fn_boss1);
-	else if(stage==2)
-		fp=FileRead_open(fn_boss2);
-	else if(stage==3)
-		fp=FileRead_open(fn_boss3);*/
 	if(fp==NULL) return;
 
 	//ファイルの最初の２行を読み飛ばす

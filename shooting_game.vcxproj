@@ -67,6 +67,7 @@
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalLibraryDirectories>./DxLib_VC</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -91,14 +92,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="attack_type.cpp" />
     <ClCompile Include="blance_type.cpp" />
     <ClCompile Include="boss.cpp" />
     <ClCompile Include="boss_act_pattern.cpp" />
     <ClCompile Include="boss_atk_pattern.cpp" />
     <ClCompile Include="boss_shot.cpp" />
     <ClCompile Include="clear_or_over.cpp" />
-    <ClCompile Include="defense_type.cpp" />
     <ClCompile Include="effect.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="eny_act_pattern.cpp" />
@@ -106,18 +105,13 @@
     <ClCompile Include="eny_shot.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="ini.cpp" />
-    <ClCompile Include="item.cpp" />
     <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="load.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mc_atk_pattern.cpp" />
-    <ClCompile Include="mc_bom.cpp" />
     <ClCompile Include="mc_laser.cpp" />
-    <ClCompile Include="mc_select.cpp" />
     <ClCompile Include="mc_shot.cpp" />
     <ClCompile Include="music.cpp" />
-    <ClCompile Include="rank.cpp" />
-    <ClCompile Include="stage_title.cpp" />
     <ClCompile Include="start.cpp" />
   </ItemGroup>
   <ItemGroup>

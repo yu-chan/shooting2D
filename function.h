@@ -11,7 +11,6 @@ GLOBAL void load_boss();
 
 //ini.cpp
 //ÉfÅ[É^ÇÃèâä˙âª
-//GLOBAL void sM_ini(sMenu sm[SM_MAX]);
 GLOBAL void ini();
 
 //keyboard.cpp
@@ -29,36 +28,16 @@ GLOBAL void graph_start_back();
 GLOBAL void graph_select_stage();
 GLOBAL void graph_play();
 
-//rank.cpp
-//GLOBAL void rank_display();
-
-//mc_select.cpp
-//GLOBAL void mc_select();
-
 //blance_type.cpp
 GLOBAL void blc_calc();
 GLOBAL void blc_move();
-
-//attack_type.cpp
-//GLOBAL void atk_calc();
-//GLOBAL void atk_move();
-
-//defence_type.cpp
-//GLOBAL void dfc_calc();
-//GLOBAL void dfc_move();
 
 //mc_shot.cpp
 GLOBAL int is_shot_flag();
 GLOBAL void mc_shot();
 
-//mc_bom.cpp
-//GLOBAL void mc_bom();
-
 //mc_laser.cpp
 GLOBAL void mc_laser();
-
-//stage_title.cpp
-//GLOBAL void calc_stage_title();
 
 //enemy.cpp
 GLOBAL void enemy_main();
@@ -73,9 +52,6 @@ GLOBAL void effect();
 GLOBAL int is_charge_flag();
 GLOBAL void beam_charge_regist(int i);
 GLOBAL int is_charge_end();
-
-//item.cpp
-//GLOBAL void item_calc();
 
 //eny_act_pattern.cpp
 GLOBAL double rang(double ang);

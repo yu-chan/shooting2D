@@ -26,48 +26,23 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			case 0:
 				start_display();
 				break;
-			//case 1:
-			//	graph_select_stage();
-			//	break;
-			//case 2:
-			//	//load_boss();
-			//	rank_display();
-			//	break;
-			//case 3:
-			//	mc_select();
-			//	break;
 			case 1:
 				if(stage_count==0) {
 					load_story();
 					load_boss();
 				}
-				//calc_stage_title();
 				graph_play();
 				effect();
-				//item_calc();
 				enemy_main();
 				enemy_shot();
-				//if(blc.hp<=0 || atk.hp<=0 || dfc.hp<=0) {
 				boss_main();
 				boss_danmaku_main();
-				//}
 				if(stage_count>10) {
 					mc_shot();
-					//mc_bom();
 					mc_laser();
 				}
 				blc_calc();
 				blc_move();
-				/*if(mc_num==0) {
-					blc_calc();
-					blc_move();
-				} else if(mc_num==1) {
-					atk_calc();
-					atk_move();
-				} else {
-					dfc_calc();
-					dfc_move();
-				}*/
 				bgm_main();
 				c_o_main();
 				stage_count++;

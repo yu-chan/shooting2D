@@ -24,29 +24,10 @@ void (*eny_atk_pattern[ENY_ATK_PATTERN_MAX])(int)={
 double shotatan2(int i) {
 	int n=eny_shot[i].num;
 	double ang;
-	/*
-	if(mc_num==0)
-		ang=atan2(blc.y-eny[n].y+eny[n].ySize/2*sin((float)eny[n].ang),
-					blc.x-eny[n].x+eny[n].xSize/2*cos((float)eny[n].ang));
-	else if(mc_num==1)
-		ang=atan2(atk.y-eny[n].y+eny[n].ySize/2*sin((float)eny[n].ang),
-					atk.x-eny[n].x+eny[n].xSize/2*cos((float)eny[n].ang));
-	else
-		ang=atan2(dfc.y-eny[n].y+eny[n].ySize/2*sin((float)eny[n].ang),
-					dfc.x-eny[n].x+eny[n].xSize/2*cos((float)eny[n].ang));
-					*/
 
 	if(mc_num==0)
 		ang=atan2(blc.y-eny[n].y, blc.x-eny[n].x);
-	/*else if(mc_num==1)
-		ang=atan2(atk.y-eny[n].y, atk.x-eny[n].x);
-	else
-		ang=atan2(dfc.y-eny[n].y, dfc.x-eny[n].x);*/
 	return ang;
-	/*
-	ang=atan2f(blc.y-eny[n].y+eny[n].ySize/2*sin((float)eny[n].ang), 
-												blc.x-eny[n].x+eny[n].ySize/2*cos((float)eny[n].ang));
-												*/
 }
 
 //ショットのフラグを確認する
@@ -65,17 +46,7 @@ int is_mc_hit(int i, int j) {
 		y=eny_shot[i].bullet[j].y-blc.y;
 		if(x * x + y * y < r * r)
 			return 1;
-	} /*else if(mc_num==1) {
-		x=eny_shot[i].bullet[j].x-atk.x;
-		y=eny_shot[i].bullet[j].y-atk.y;
-		if(x * x + y * y < r * r)
-			return 1;
-	} else {
-		x=eny_shot[i].bullet[j].x-dfc.x;
-		y=eny_shot[i].bullet[j].y-dfc.y;
-		if(x * x + y * y < r * r)
-			return 1;
-	}*/
+	}
 	return 0;
 }
 
@@ -99,8 +70,6 @@ void eny_bullet_calc(int i) {
 				se_flag[12]=1;
 				eny_shot[i].bullet[j].flag=0;
 				if(mc_num==0)      blc.hp-=eny[i].power;
-				//else if(mc_num==1) atk.hp-=eny[i].power;
-				//else               dfc.hp-=eny[i].power;
 				if(blc.hp<=0) {
 					over_regist();
 					display_mode = 2;
@@ -116,24 +85,7 @@ void eny_shot_calc() {
 		if(eny_shot[i].flag!=0 && 0<=eny_shot[i].knd && eny_shot[i].knd<ENY_ATK_PATTERN_MAX) {
 			eny_atk_pattern[eny_shot[i].knd](i);
 			eny_bullet_calc(i);
-			//eny_shot[i].x+=eny_shot[i].vx;
-			//eny_shot[i].y+=eny_shot[i].vy;
-			//eny_shot[i].y+=eny_shot[i].spd;
 			eny_shot[i].cnt++;
-			/*
-			//画面外なら消す
-			if(eny_shot[i].x<-20 || eny_shot[i].x>WND_WID+20 || 
-				eny_shot[i].y<-20 || eny_shot[i].y>WND_HET+20)
-				eny_shot[i].flag=0;
-			//自機に当たったら消す
-			if(is_mc_hit(i)==1) {
-				se_flag[12]=1;
-				eny_shot[i].flag=0;
-				if(mc_num==0)      blc.hp-=eny[i].power;
-				else if(mc_num==1) atk.hp-=eny[i].power;
-				else               dfc.hp-=eny[i].power;
-			}
-			*/
 		}
 	}
 }

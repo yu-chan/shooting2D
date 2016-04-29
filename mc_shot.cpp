@@ -23,24 +23,6 @@ void mc_shot_regist() {
 	   (checkKey(KEY_INPUT_SPACE)>0 && checkKey(KEY_INPUT_SPACE)<=10)||
 	   (checkKey(KEY_INPUT_J)>0 && checkKey(KEY_INPUT_J)<=10)) {
 		   mc_atk_pattern[shot_mode]();
-		   /*
-		   if(mc_num==0)      blc.shot_cnt++;
-		   else if(mc_num==1) atk.shot_cnt++;
-		   else               dfc.shot_cnt++;
-		 
-			
-
-		   if((f=is_shot_flag())!=-1 && 
-			   (blc.shot_cnt%3==0 || atk.shot_cnt%3==0 || dfc.shot_cnt%3==0)) {
-			   ms[f].flag=1;
-			   ms[f].cnt=0;
-			   ms[f].power=5;
-			   ms[f].spd=10;
-			   if(mc_num==0)      { ms[f].x=blc.x; ms[f].y=blc.y-20; }
-			   else if(mc_num==1) { ms[f].x=atk.x; ms[f].y=atk.y-20; }
-			   else               { ms[f].x=dfc.x; ms[f].y=dfc.y-20; }
-			   se_flag[3]=1;
-		   }*/
 	}
 	
 	//NキーかCキーを押せばショットが変わる
@@ -128,41 +110,12 @@ void explosion_regist_s(float x, float y) {
 	if(eps_count==EPS_MAX) eps_count=0;
 }
 
-//アイテム確認
-//int is_item_s(int j) {
-//	for(int i=0; i<ITEM_KND; i++) {
-//		if(eny[j].item_knd[i]==1) {
-//			eny[j].item_flag[i]=1;
-//			return i;
-//		}
-//	}
-//	return -1;
-//}
-
-//アイテムを登録
-//void item_regist_s(int j, int knd) {
-//	item[item_count].flag=1;
-//	item[item_count].knd=knd;
-//	item[item_count].x=eny[j].x;
-//	item[item_count].y=eny[j].y;
-//	item[item_count].xSize=30;
-//	item[item_count].ySize=30;
-//	item[item_count].sp=2;
-//	item_count++;
-//}
-
 //敵の生存判定
 int eny_death_judge_s(int j) {
 	//int knd;
 	//敵のHPが0以下になったら、敵を消す
 	if(eny[j].hp<=0) {
 		eny[j].flag=0;
-		//score[rank][stage]+=5;
-		//消えたときアイテムを持っているか調べる
-		//持っていれば登録
-		/*if((knd=is_item_s(j))!=-1) {
-			item_regist_s(j, knd);
-		}*/
 		return 1;
 	}
 	return 0;
