@@ -1,4 +1,4 @@
-//戦闘機バランスタイプ
+//戦闘機
 typedef struct {
 	float x, y, ang;//x座標, y座標, 角度
 	int hp, hp_max;//x座標, y座標, 角度, 速度, hp, 最大hp
